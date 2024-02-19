@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Company Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Taxi Company</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('booking') }}">Book a Ride</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>We are committed to offering our customers the very best quality taxi service, and have been doing so since we were founded. We currently operate across numerous cities and our service is second to none.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us at info@ourtaxicompany.com</p>
+    </footer>
+</body>
+</html>
