@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Booking!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('booking') }}">Book Another Ride</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Booking Details</h2>
+        {% if session['booking_details'] %}
+        <p><strong>Name:</strong> {{ session['booking_details']['name'] }}</p>
+        <p><strong>Email:</strong> {{ session['booking_details']['email'] }}</p>
+        <p><strong>Pickup Location:</strong> {{ session['booking_details']['pickup'] }}</p>
+        <p><strong>Destination:</strong> {{ session['booking_details']['destination'] }}</p>
+        {% else %} 
+        <p>Booking details are not available.</p>
+        {% endif %}
+        <p>Click <a href="{{ url_for('index') }}">HERE</a> to return to the main page.</p>
+    </main>
+    <footer>
+        <p>Need help? Contact us at premiertaxissalisbury@gmail.com</p>
+    </footer>
+</body>
+</html>
+
